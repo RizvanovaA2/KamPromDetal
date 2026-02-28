@@ -36,7 +36,7 @@ body {
 }
 
 .hero-section {
-    background: linear-gradient(135deg, #ffffff 100%, #ffffff 100%);
+    background: transparent;
     color: black;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -256,6 +256,22 @@ footer {
     background-color: #ffc107 !important;
 }
 
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(76, 175, 80, 0.15);
+    border: 3px solid rgba(76, 175, 80, 0.3);
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 60px rgba(76, 175, 80, 0.25);
+    border-color: #4CAF50;
+}
+
 @media (max-width: 768px) {
     .hero-section {
         padding-top: 80px;
@@ -286,13 +302,6 @@ footer {
 
 .logo {
     max-height: 40px;
-}
-
-.hero-image {
-    height: 350px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .img-fluid {
