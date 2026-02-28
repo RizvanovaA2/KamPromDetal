@@ -126,17 +126,15 @@ section {
 }
 
 .btn-telegram {
-    background-color: #8bc34a;
-    border-color: #8bc34a;
+    background-color: #0088cc;
+    border-color: #0088cc;
     color: white;
 }
 
 .btn-telegram:hover {
-    background-color: #7cb342;
-    border-color: #7cb342;
+    background-color: #0077b5;
+    border-color: #0077b5;
     color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(139, 195, 74, 0.3);
 }
 
 .cart-item {
@@ -334,4 +332,3 @@ footer {
 .bg-warning {
     background-color: #ffc107 !important;
 }
-
