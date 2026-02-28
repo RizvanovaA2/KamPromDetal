@@ -113,28 +113,30 @@ section {
 }
 
 .btn-primary {
-    background-color: #0a2540;
-    border-color: #0a2540;
+    background-color: #4CAF50;
+    border-color: #4CAF50;
     padding: 10px 25px;
 }
 
 .btn-primary:hover {
-    background-color: #1a365d;
-    border-color: #1a365d;
+    background-color: #45a049;
+    border-color: #45a049;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
 }
 
 .btn-telegram {
-    background-color: #0088cc;
-    border-color: #0088cc;
+    background-color: #8bc34a;
+    border-color: #8bc34a;
     color: white;
 }
 
 .btn-telegram:hover {
-    background-color: #0077b5;
-    border-color: #0077b5;
+    background-color: #7cb342;
+    border-color: #7cb342;
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 195, 74, 0.3);
 }
 
 .cart-item {
