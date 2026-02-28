@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КамПромДеталь - Нефтегазовое оборудование в Камбарке</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="КамПромДеталь" height="40" class="me-2 logo">
+                <span class="fw-bold">КамПром</span><span class="text-primary">Деталь</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#documents">Документы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacts">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cart-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge bg-danger" id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container py-5 mt-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold mb-4">Нефтегазовое оборудование и арматура</h1>
+                    <p class="lead mb-4">Поставка качественного оборудования для нефтегазовой промышленности. Работаем по всей России из Камбарки.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#products" class="btn btn-primary btn-lg">
+                            <i class="fas fa-box-open"></i> Смотреть каталог
+                        </a>
+                        <a href="https://t.me/KamPromDetal_bot" class="btn btn-telegram btn-lg" target="_blank">
+                            <i class="fab fa-telegram"></i> Заказать в Telegram
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="images/hero-image.jpg" alt="Нефтегазовое оборудование" class="img-fluid hero-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">О компании</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>КамПромДеталь</h3>
+                    <p>Специализированная компания по поставкам нефтегазового оборудования и промышленной арматуры. Базируемся в Камбарке — промышленном центре Удмуртской Республики.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i> Производство в Камбарке</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Сертифицированная продукция</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Доставка по всей России</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Техническая поддержка 24/7</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="stats p-4 rounded shadow-sm">
+                        <div class="row text-center">
+                            <div class="col-6 mb-4">
+                                <div class="display-6 fw-bold text-primary">13+</div>
+                                <div>Лет работы</div>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <div class="display-6 fw-bold text-primary">18</div>
+                                <div>Товаров</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="display-6 fw-bold text-primary">200+</div>
+                                <div>Клиентов</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="display-6 fw-bold text-primary">24/7</div>
+                                <div>Консультации</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">Каталог товаров</h2>
+            <div class="row g-4" id="products-container">
+            </div>
+        </div>
+    </section>
+
+    <section id="documents" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">Разрешительные документы</h2>
+            <div class="row text-center mb-4">
+                <div class="col-12">
+                    <p class="lead">Разрешительный документ на изготовление и реализацию на территории РФ и таможенного союза</p>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-4 col-sm-6">
+                    <div class="card document-card h-100">
+                        <img src="images/dok1.jpg" class="card-img-top document-img" alt="Документ 1">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card document-card h-100">
+                        <img src="images/dok2.jpg" class="card-img-top document-img" alt="Документ 2">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card document-card h-100">
+                        <img src="images/dok3.jpg" class="card-img-top document-img" alt="Документ 3">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card document-card h-100">
+                        <img src="images/dok4.jpg" class="card-img-top document-img" alt="Документ 4">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card document-card h-100">
+                        <img src="images/dok5.jpg" class="card-img-top document-img" alt="Документ 5">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card document-card h-100">
+                        <img src="images/dok6.jpg" class="card-img-top document-img" alt="Документ 6">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card document-card h-100">
+                        <img src="images/dok7.jpg" class="card-img-top document-img" alt="Документ 7">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card document-card h-100">
+                        <img src="images/dok8.jpg" class="card-img-top document-img" alt="Документ 8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-shopping-cart me-2"></i>Ваша корзина
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cart-items">
+                        <div class="text-center py-5">
+                            <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
+                            <p class="text-muted">Корзина пуста</p>
+                        </div>
+                    </div>
+                    <div class="cart-total text-end mt-4 pt-4 border-top">
+                        <h4>Цена договорная</h4>
+                        <p class="text-muted small mb-0">Свяжемся для уточнения стоимости</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Продолжить покупки</button>
+                    <button type="button" class="btn btn-primary" onclick="checkout()">
+                        <i class="fas fa-check"></i> Оформить в Telegram
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="contacts" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">Контакты</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">
+                                <i class="fas fa-map-marker-alt text-primary me-2"></i>Наш адрес в Камбарке
+                            </h4>
+                            <a href="https://yandex.ru/maps/-/CLsxR4l2" 
+                               target="_blank" class="d-block text-decoration-none">
+                                <div class="map-container rounded overflow-hidden mb-2" style="height: 300px; background: #f8f9fa;">
+                                    <div class="h-100 d-flex flex-column justify-content-center align-items-center">
+                                        <i class="fas fa-map-marked-alt fa-4x text-primary mb-3"></i>
+                                        <h5 class="text-dark mb-2">КамПромДеталь</h5>
+                                        <p class="text-muted text-center mb-0">ул. Суворова, 8<br>Камбарка, Удмуртская Республика, 427954</p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="badge bg-light text-dark">
+                                        <i class="fas fa-external-link-alt me-1"></i> Открыть в Яндекс.Картах
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="mt-4">
+                                <p class="mb-2">
+                                    <i class="fas fa-location-dot me-2 text-primary"></i>
+                                    <strong>Адрес производства:</strong><br>
+                                    г. Камбарка, ул. Суворова, д. 8, 427954
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4"><i class="fas fa-address-card text-primary me-2"></i>Свяжитесь с нами</h4>
+                            <div class="contact-info">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <h6>Телефон для заказов</h6>
+                                        <a href="tel:+8800201284" class="text-decoration-none fw-bold">+8 (800) 201-28-4</a><br>
+                                        <small class="text-muted">Бесплатно по России</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h6>Email</h6>
+                                        <a href="mailto:evraz.ivanova@yandex.ru" class="text-decoration-none">evraz.ivanova@yandex.ru</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-telegram"></i>
+                                    </div>
+                                    <div>
+                                        <h6>Telegram-бот для заказов</h6>
+                                        <a href="https://t.me/KamPromDetal_bot" target="_blank" class="btn btn-telegram btn-sm">
+                                            <i class="fab fa-telegram me-1"></i> Перейти в бота
+                                        </a>
+                                        <p class="small text-muted mt-1 mb-0">Быстрое оформление заказа</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <img src="images/logo.png" alt="КамПромДеталь" height="40" class="me-3">
+                        <div>
+                            <h5 class="mb-0">КамПромДеталь</h5>
+                            <p class="mb-0 small">Нефтегазовое оборудование и арматура</p>
+                            <p class="small text-muted mt-1">Камбарка, ул. Суворова, д. 8, 427954</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">© 2026 КамПромДеталь. Все права защищены.</p>
+                    <p class="text-muted small mb-0">Официальный сайт-визитка компании</p>
+                    <p class="small mt-2">
+                        <a href="tel:+8800201284" class="text-white text-decoration-none me-3">
+                            <i class="fas fa-phone me-1"></i>+8 (800) 201-28-4
+                        </a>
+                        <a href="https://t.me/KamPromDetal_bot" target="_blank" class="text-white text-decoration-none">
+                            <i class="fab fa-telegram me-1"></i>Telegram
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
